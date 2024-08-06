@@ -39,7 +39,6 @@ export const resolveUserTasks: ResolveFn<Task[]> = (
   } else {
     tasks.sort((a, b) => (a.id > b.id ? -1 : 1));
   }
-  console.log(tasksService.allTasks())
 
   return tasks.length ? tasks : [];
 };

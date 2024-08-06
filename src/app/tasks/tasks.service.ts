@@ -4,7 +4,7 @@ import { type NewTaskData } from './task/task.model';
 
 @Injectable({ providedIn: 'root' })
 export class TasksService {
-  private tasks = signal([
+   tasks = signal([
     {
       id: 't1',
       userId: 'u1',
@@ -30,8 +30,8 @@ export class TasksService {
     },
   ]);
 
-  allTasks = this.tasks.asReadonly();
-
+  allTasks = this.tasks.asReadonly()
+  
   constructor() {
     const tasks = localStorage.getItem('tasks');
 
